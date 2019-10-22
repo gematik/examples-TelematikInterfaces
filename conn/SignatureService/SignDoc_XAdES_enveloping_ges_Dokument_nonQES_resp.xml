@@ -1,0 +1,291 @@
+<!--XML-Beispieldatei für folgenden Anwendungsfall: SignDocument Response, XAdES, enveloping, gesamtes Dokument, nonQES-->
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:kctxt="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:kcsc="http://ws.gematik.de/conn/CardServiceCommon/v2.0" xmlns:kerr="http://ws.gematik.de/tel/error/v2.0" xmlns:kpi="http://ws.gematik.de/int/version/ProductInformation/v1.1" xmlns:kcti="http://ws.gematik.de/conn/CardTerminalInfo/v8.0" xmlns:kcrtc="http://ws.gematik.de/conn/CertificateServiceCommon/v2.0" xmlns:ksigp="urn:oasis:names:tc:dss-x:1.0:profiles:SignaturePolicy:schema#" xmlns:kvrep="urn:oasis:names:tc:dss-x:1.0:profiles:verificationreport:schema#" xmlns:kets2="http://uri.etsi.org/02231/v2#" xmlns:kds="http://www.w3.org/2000/09/xmldsig#" xmlns:kenc="http://www.w3.org/2001/04/xmlenc#" xmlns:kcom="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:kcore="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:kets1="http://uri.etsi.org/01903/v1.3.2#" xmlns:ksaml2="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ksaml1="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:kauthws="http://ws.gematik.de/conn/AuthSignatureService/WSDL/v7.4" xmlns:kcrtws="http://ws.gematik.de/conn/CertificateService/WSDL/v6.0" xmlns:kcrt="http://ws.gematik.de/conn/CertificateService/v6.0" xmlns:kcryws="http://ws.gematik.de/conn/EncryptionService/WSDL/v6.1" xmlns:kcry="http://ws.gematik.de/conn/EncryptionService/v6.1" xmlns:kctws="http://ws.gematik.de/conn/CardTerminalService/WSDL/v1.1" xmlns:kct="http://ws.gematik.de/conn/CardTerminalService/v1.1" xmlns:kcws="http://ws.gematik.de/conn/CardService/WSDL/v8.1" xmlns:kc="http://ws.gematik.de/conn/CardService/v8.1" xmlns:kevws="http://ws.gematik.de/conn/EventService/WSDL/v7.2" xmlns:kevt="http://ws.gematik.de/conn/EventService/v7.2" xmlns:kkvk="http://ws.gematik.de/conn/vsds/KvkService/v4.0" xmlns:ksigws="http://ws.gematik.de/conn/SignatureService/WSDL/v7.4" xmlns:ksig="http://ws.gematik.de/conn/SignatureService/v7.4" xmlns:kvsd="http://ws.gematik.de/conn/vsds/VSDService/v5.2">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <ksig:SignDocumentResponse>
+         <ksig:SignResponse RequestID="anyID">
+            <kcom:Status>
+               <kcom:Result>Warning</kcom:Result>
+               <kerr:Error>
+                  <kerr:MessageID>MessageID</kerr:MessageID>
+                  <kerr:Timestamp>2019-05-22T12:56:10Z</kerr:Timestamp>
+                  <kerr:Trace>
+                     <kerr:EventID>EventID</kerr:EventID>
+                     <kerr:Instance>Konnektor-Lokal</kerr:Instance>
+                     <kerr:LogReference/>
+                     <kerr:CompType>Konnektor</kerr:CompType>
+                     <kerr:Code>4193</kerr:Code>
+                     <kerr:Severity>Warning</kerr:Severity>
+                     <kerr:ErrorType>Security</kerr:ErrorType>
+                     <kerr:ErrorText>Kein XML-Schema für XML-Dokument vorhanden</kerr:ErrorText>
+                  </kerr:Trace>
+               </kerr:Error>
+            </kcom:Status>
+            <ksig:OptionalOutputs>
+               <ksig:DocumentWithSignature>
+                  <kcom:Base64XML/>
+               </ksig:DocumentWithSignature>
+            </ksig:OptionalOutputs>
+            <kcore:SignatureObject>
+               <!--Beispiel f�r eine elektronische Sammelerkl�rung der KV Nordrhein, Auspr�gung: Arzt-->
+               <ds:Signature Id="Sig8Vsa0U0WiNlN_2Xb" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                  <ds:SignedInfo>
+                     <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2006/12/xml-c14n11"/>
+                     <ds:SignatureMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha256-rsa-MGF1"/>
+                     <ds:Reference Id="KonnaYdhkSwstcX8_veX" URI="#ObjmM9FMptDr4yeyl3r">
+                        <ds:Transforms>
+                           <ds:Transform Algorithm="http://www.w3.org/2006/12/xml-c14n11"/>
+                        </ds:Transforms>
+                        <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                        <ds:DigestValue>QOxFI85+MwyDwYFp1Yzn6OM8lih/+w1rbhivaKpQQnY=</ds:DigestValue>
+                     </ds:Reference>
+                     <ds:Reference Id="KonnPqck3HGCyFJpjoFL" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Konn4ObFLuIqChW8SkGc">
+                        <ds:Transforms>
+                           <ds:Transform Algorithm="http://www.w3.org/2006/12/xml-c14n11"/>
+                        </ds:Transforms>
+                        <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                        <ds:DigestValue>d56ZAgnqThPw4XGZjnE6VuEKxRm8ipfwV5qnGDopoas=</ds:DigestValue>
+                     </ds:Reference>
+                  </ds:SignedInfo>
+                  <ds:SignatureValue Id="SigValueM5FAK_AeRsUopcsj">o5/bp+9m/3l26/ZdFcl7F+xeFrJrf6afPm/8hBde4qvdxGB0QLq2CJSYXbHn2DMoP+eXEHTaaWjBHPOZ6paKs7w6JFZURgma63U5/j9NEwskVnkjKavuBdmOA6V8oxqX5CPlbucXPX9A6ZQUDhzWNxX9rCCqzqcqzrXerRc2Cf3T6Z4P2P0ebOD5jgcCPncZRgBFD6NwK+cuKckmUHnZaDEgOBYgiHWZqEteSi0xk6UYfGLcwMbW0tO18vsIuPgOHCxfJcwdSskWj6EYnh8b4OpJ9hvA/Y6PaANpmY0XyhM65MzxGMJlQ24OVnmRfZxl/LVFyWjEoKMC6nikzpjMvg==</ds:SignatureValue>
+                  <ds:KeyInfo>
+                     <ds:X509Data>
+                        <ds:X509Certificate>MIIFEDCCA/igAwIBAgIHAIGpcmxwiDANBgkqhkiG9w0BAQsFADCBmjELMAkGA1UEBhMCREUxHzAdBgNVBAoMFmdlbWF0aWsgR21iSCBOT1QtVkFMSUQxSDBGBgNVBAsMP0luc3RpdHV0aW9uIGRlcyBHZXN1bmRoZWl0c3dlc2Vucy1DQSBkZXIgVGVsZW1hdGlraW5mcmFzdHJ1a3R1cjEgMB4GA1UEAwwXR0VNLlNNQ0ItQ0EyNCBURVNULU9OTFkwHhcNMTgwMzI5MDAwMDAwWhcNMjMwMzI4MjM1OTU5WjCBoDE4MDYGA1UEAwwvWmFobmFyenRwcmF4aXMgTHVjYSBHcmFmIGQnIEF1YmVydGluw7NURVNULU9OTFkxHTAbBgNVBAUTFDgwMjc2ODgzMTEwMDAwMDk0NTA2MTgwNgYDVQQKDC9aYWhuYXJ6dHByYXhpcyBMdWNhIEdyYWYgZCcgQXViZXJ0aW7Ds05PVC1WQUxJRDELMAkGA1UEBhMCREUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDQh6fhtnVDpMI6wJS0OkAYRqVrpVOI584QKEoMKOiLNhMv5aOFBGPM4asGERGvGIlB4lrKoRdSiY/lrxABQKwADWgcKgJ5NhLmzYAHgfFGIsjKWDxOaYr7mr891ZpHUCmcN1jG0l0uXa84j1FqAFrO7lrQyF3qX0bPz1qQAPCcsuLkoFkzwlErUGhvVZ3ArIUnL7rwEg4bewyJryBUj2brXPBL4nTxajp9mG28eOaB2v9ghphmCS7baOgk5/iIrajj9VnGaau/rsZrIUKVsG2l/F2fQVUrgw1oqAVgP+qdxGx99xW+Q/lS997H6zVH0yAeLcjlyLH2jd8usr88LymRAgMBAAGjggFRMIIBTTAdBgNVHQ4EFgQULV61xCVHfgggN7oI2bbYPKCnlcUwDAYDVR0TAQH/BAIwADB+BgUrJAgDAwR1MHOkKDAmMQswCQYDVQQGEwJERTEXMBUGA1UECgwOZ2VtYXRpayBCZXJsaW4wRzBFMEMwQTAQDA5aYWhuYXJ6dHByYXhpczAJBgcqghQATAQzEyIyLVNNQy1CLVRlc3RrYXJ0ZS0tODgzMTEwMDAwMDk0NTA2MB8GA1UdIwQYMBaAFHrp4W/qFFkWBe4D6dP9Iave6dmeMCAGA1UdIAQZMBcwCgYIKoIUAEwEgSMwCQYHKoIUAEwETjAOBgNVHQ8BAf8EBAMCBkAwSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzABhi9odHRwOi8vb2NzcC5wa2kudGVsZW1hdGlrLXRlc3Q6ODA4MC9DTU9DU1AvT0NTUDANBgkqhkiG9w0BAQsFAAOCAQEAZAM71qBaec+9JNQuIKuXS0ZXo2C7u2MHfWoTJRre8a7bS3fo6Le18/emO4V2gCEgncz9OZ6VyB/5YF/2H+vRsCTDnz+E/Y4oL5Eclu35ABp/u65V/PVXR+QDa9XesJqVX3dtl/l4YsISJW0ftsItudsmk9ATYEeadgwZaUYvDkNSBRVSpHS14GeiF8ahNXbxUAVf8vUZbUb4vms0zQZ0B92gc8dgxkMDESDOMbDhcpS2Ta++joaydv/FoiV4zz1i3Npc6FlzbYCkkj2dEqcE/WYx67PN9vpDSfxScMPPFyl85xf83uJYfu6yIT669Ayj1dCYxFSXNqck+9GrUBcS9A==</ds:X509Certificate>
+                     </ds:X509Data>
+                  </ds:KeyInfo>
+                  <ds:Object Id="ObjmM9FMptDr4yeyl3r">
+                     <ehd:ehd ehd_version="1.40" xsi:schemaLocation="urn:ehd/001 ..\Schema\ese_root.xsd" xmlns="urn:ehd/ese/001" xmlns:sciphox="urn::sciphox-org/sciphox" xmlns:ehd="urn:ehd/001">
+                        <ehd:header>
+                           <ehd:id EX="1" RT="123456789"/>
+                           <!--EX=lfd.Nr.  RT=LANR-->
+                           <ehd:version_nbr V="1"/>
+                           <ehd:document_type_cd DN="Elektronische Sammelerkl�rung" S="1.2.276.0.76.5.100" V="ese"/>
+                           <ehd:service_tmr V="2015-07-01..2015-09-31"/>
+                           <!--IV. Quartal-->
+                           <ehd:origination_dttm V="2015-09-30"/>
+                           <!--Erstellungsdatum der Sammelerkl�rung-->
+                           <ehd:intended_recipient>
+                              <ehd:organization>
+                                 <ehd:organization.nm V="Arzt"/>
+                                 <!--Sammelerkl�rung mit Auspr�gung: Arzt-->
+                              </ehd:organization>
+                           </ehd:intended_recipient>
+                           <ehd:originator>
+                              <ehd:organization>
+                                 <ehd:id EX="38" RT="1.2.276.0.76.5.233"/>
+                                 <ehd:organization.nm V="KV Nordrhein"/>
+                              </ehd:organization>
+                           </ehd:originator>
+                           <ehd:provider>
+                              <ehd:person>
+                                 <ehd:id EX="123456789" RT="1.2.276.0.76.4.16"/>
+                                 <ehd:person_name>
+                                    <ehd:nm>
+                                       <ehd:PFX V="Dr. med."/>
+                                       <ehd:GIV V="Hans"/>
+                                       <ehd:FAM V="Test"/>
+                                    </ehd:nm>
+                                 </ehd:person_name>
+                                 <ehd:local_header>
+                                    <ehd:fachgruppenbezeichnung V="Facharzt f. Innere Medizin -Angiologie-"/>
+                                 </ehd:local_header>
+                              </ehd:person>
+                              <ehd:person>
+                                 <ehd:id EX="123456789" RT="1.2.276.0.76.4.16"/>
+                                 <ehd:person_name>
+                                    <ehd:nm>
+                                       <ehd:PFX V="Dr. med."/>
+                                       <ehd:GIV V="Fritz"/>
+                                       <ehd:FAM V="Sauber"/>
+                                    </ehd:nm>
+                                 </ehd:person_name>
+                                 <ehd:local_header>
+                                    <ehd:fachgruppenbezeichnung V="Facharzt f�r Hals-Nasen-Ohrenheilkunde"/>
+                                    <ehd:fachgruppenbezeichnung V="Facharzt f�r Phoniatrie u. P�daudiologie"/>
+                                 </ehd:local_header>
+                              </ehd:person>
+                              <ehd:organization>
+                                 <ehd:id EX="274412300" RT="1.2.276.0.76.4.17"/>
+                                 <ehd:organization.nm V="Gemeinschaftspraxis Dres. Hans Test Fritz Sauber"/>
+                                 <ehd:addr>
+                                    <ehd:POB V="51371"/>
+                                    <ehd:CTY V="Leverkusen"/>
+                                 </ehd:addr>
+                                 <ehd:telecom V="Tel:022159708007"/>
+                              </ehd:organization>
+                           </ehd:provider>
+                           <ehd:interface>
+                              <ehd:id EX="ese" RT="1.2.276.0.76.5.109"/>
+                              <ehd:interface.nm V="Elektronische Sammelerkl�rung (ese)"/>
+                              <ehd:version V="1.21"/>
+                           </ehd:interface>
+                        </ehd:header>
+                        <ehd:body>
+                           <ese_data>
+                              <fall_statistik>
+                                 <anzahl_gesamt V="2754"/>
+                              </fall_statistik>
+                              <vertretungszeit_liste>
+                                 <titel V="Vertretungszeiten"/>
+                                 <bool_komplex>
+                                    <true>
+                                       <komplex>
+                                          <zeitraum_tmr V="2015-08-01..2015-08-15"/>
+                                          <provider>
+                                             <person>
+                                                <id EX="123456781" RT="1.2.276.0.76.4.16"/>
+                                                <person_name>
+                                                   <nm>
+                                                      <PFX V="Dr. med."/>
+                                                      <GIV V="Eleonore"/>
+                                                      <GIV V="Hanna"/>
+                                                      <FAM V="Tester2"/>
+                                                      <FAM V="M�ller"/>
+                                                   </nm>
+                                                </person_name>
+                                             </person>
+                                          </provider>
+                                       </komplex>
+                                       <komplex>
+                                          <zeitraum_tmr V="2015-08-16..2015-08-20"/>
+                                          <provider>
+                                             <person>
+                                                <id EX="123456782" RT="1.2.276.0.76.4.16"/>
+                                                <person_name>
+                                                   <nm>
+                                                      <PFX V="Dr. med."/>
+                                                      <GIV V="August"/>
+                                                      <FAM V="Vertreter"/>
+                                                      <FAM V="M�ller"/>
+                                                   </nm>
+                                                </person_name>
+                                             </person>
+                                          </provider>
+                                       </komplex>
+                                       <komplex>
+                                          <zeitraum_tmr V="2015-08-21..2015-08-25"/>
+                                          <provider>
+                                             <person>
+                                                <id EX="123456783" RT="1.2.276.0.76.4.16"/>
+                                                <person_name>
+                                                   <nm>
+                                                      <PFX V="Dr. med."/>
+                                                      <GIV V="Gabi"/>
+                                                      <GIV V="Maria"/>
+                                                      <FAM V="Kamphausen-Erberich"/>
+                                                   </nm>
+                                                </person_name>
+                                             </person>
+                                          </provider>
+                                       </komplex>
+                                    </true>
+                                 </bool_komplex>
+                              </vertretungszeit_liste>
+                              <angestellter_arzt_liste>
+                                 <titel V="Angestellter Arzt"/>
+                                 <bool_komplex>
+                                    <true>
+                                       <komplex>
+                                          <zeitraum_tmr V="2015-08-01..2015-08-15"/>
+                                          <provider>
+                                             <person>
+                                                <id EX="123456781" RT="1.2.276.0.76.4.16"/>
+                                                <person_name>
+                                                   <nm>
+                                                      <PFX V="Dr. med."/>
+                                                      <GIV V="Sabine"/>
+                                                      <GIV V="Hannah"/>
+                                                      <FAM V="Angestellte"/>
+                                                   </nm>
+                                                </person_name>
+                                             </person>
+                                          </provider>
+                                       </komplex>
+                                    </true>
+                                 </bool_komplex>
+                              </angestellter_arzt_liste>
+                              <org_notdienstzeit_liste>
+                                 <titel V="Teilnahme am organisierten �rztlichen Notfalldienst"/>
+                                 <bool_komplex>
+                                    <true>
+                                       <komplex>
+                                          <zeitraum_tmr V="2015-07-16+16:00..2015-07-17+01:00"/>
+                                       </komplex>
+                                       <komplex>
+                                          <zeitraum_tmr V="2015-08-22"/>
+                                       </komplex>
+                                       <komplex>
+                                          <zeitraum_tmr V="2015-09-23..2015-09-24"/>
+                                       </komplex>
+                                       <komplex>
+                                          <zeitraum_tmr V="2015-07-19+16:00..2015-07-20+01:00"/>
+                                       </komplex>
+                                       <komplex>
+                                          <zeitraum_tmr V="2015-07-22"/>
+                                       </komplex>
+                                    </true>
+                                 </bool_komplex>
+                              </org_notdienstzeit_liste>
+                              <assistent_liste>
+                                 <titel V="Besch�ftigung eines Assistenten"/>
+                                 <bool_komplex>
+                                    <true>
+                                       <komplex>
+                                          <zeitraum_tmr V="2015-09-01..2015-09-18"/>
+                                          <provider>
+                                             <person>
+                                                <id EX="123456783" RT="1.2.276.0.76.4.16"/>
+                                                <person_name>
+                                                   <nm>
+                                                      <PFX V="Prof."/>
+                                                      <PFX V="Dr. med."/>
+                                                      <GIV V="Hannah"/>
+                                                      <GIV V="Maria"/>
+                                                      <GIV V="Marianne"/>
+                                                      <FAM V="Assistentin"/>
+                                                      <FAM V="B�cker"/>
+                                                   </nm>
+                                                </person_name>
+                                             </person>
+                                          </provider>
+                                       </komplex>
+                                    </true>
+                                 </bool_komplex>
+                              </assistent_liste>
+                           </ese_data>
+                        </ehd:body>
+                     </ehd:ehd>
+                  </ds:Object>
+                  <ds:Object>
+                     <xades:QualifyingProperties Target="#Sig8Vsa0U0WiNlN_2Xb" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#">
+                        <xades:SignedProperties Id="Konn4ObFLuIqChW8SkGc">
+                           <xades:SignedSignatureProperties>
+                              <xades:SigningTime>2019-05-22T12:56:09Z</xades:SigningTime>
+                              <xades:SigningCertificate>
+                                 <xades:Cert>
+                                    <xades:CertDigest>
+                                       <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+                                       <ds:DigestValue>nO63T918aZtl3FRnYDD4/C584DbGFnkZbeSZAKDM/Uo=</ds:DigestValue>
+                                    </xades:CertDigest>
+                                    <xades:IssuerSerial>
+                                       <ds:X509IssuerName>C=DE, O=gematik GmbH NOT-VALID, OU=Institution des Gesundheitswesens-CA der Telematikinfrastruktur, CN=GEM.SMCB-CA24 TEST-ONLY</ds:X509IssuerName>
+                                       <ds:X509SerialNumber>142564769165448</ds:X509SerialNumber>
+                                    </xades:IssuerSerial>
+                                 </xades:Cert>
+                              </xades:SigningCertificate>
+                           </xades:SignedSignatureProperties>
+                           <xades:SignedDataObjectProperties>
+                              <xades:DataObjectFormat ObjectReference="#KonnaYdhkSwstcX8_veX">
+                                 <xades:Description>String</xades:Description>
+                                 <xades:MimeType>text/xml</xades:MimeType>
+                              </xades:DataObjectFormat>
+                           </xades:SignedDataObjectProperties>
+                        </xades:SignedProperties>
+                     </xades:QualifyingProperties>
+                  </ds:Object>
+               </ds:Signature>
+            </kcore:SignatureObject>
+         </ksig:SignResponse>
+      </ksig:SignDocumentResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

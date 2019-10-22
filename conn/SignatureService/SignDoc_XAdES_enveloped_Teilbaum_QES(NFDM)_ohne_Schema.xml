@@ -1,0 +1,32 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header/>
+  <S:Body>
+    <!--XML-Beispieldatei für folgenden Anwendungsfall: SignDocument, XAdES, enveloped, Teilbaum, QES-->
+    <ns10:SignDocument xmlns="http://www.w3.org/2001/04/xmlenc#" xmlns:ns10="http://ws.gematik.de/conn/SignatureService/v7.4" xmlns:ns11="urn:oasis:names:tc:dss-x:1.0:profiles:SignaturePolicy:schema#" xmlns:ns12="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns13="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ns14="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://ws.gematik.de/conn/CertificateServiceCommon/v2.0" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns6="urn:oasis:names:tc:dss-x:1.0:profiles:verificationreport:schema#" xmlns:ns7="http://uri.etsi.org/02231/v2#" xmlns:ns8="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns9="http://ws.gematik.de/tel/error/v2.0">
+      <ns8:CardHandle>CardHandle</ns8:CardHandle>
+      <ns12:Context>
+        <ns8:MandantId>Mandant1</ns8:MandantId>
+        <ns8:ClientSystemId>Clientsystem1</ns8:ClientSystemId>
+        <ns8:WorkplaceId>Arbeitsplatz1</ns8:WorkplaceId>
+        <ns8:UserId>nutzer</ns8:UserId>
+      </ns12:Context>
+      <ns10:TvMode>CONFIRMED</ns10:TvMode>
+      <ns10:JobNumber>MVE-093</ns10:JobNumber>
+      <ns10:SignRequest RequestID="QES821236567">
+        <ns10:OptionalInputs>
+          <ns5:SignatureType>urn:ietf:rfc:3275</ns5:SignatureType>
+          <ns5:SignaturePlacement CreateEnvelopedSignature="false" WhichDocument="QES821236567">
+            <ns5:XPathFirstChildOf>/*[local-name()='NFD_Document']/*[local-name()='SignatureArzt']</ns5:XPathFirstChildOf>
+          </ns5:SignaturePlacement>
+          <ns11:GenerateUnderSignaturePolicy>
+            <ns11:SignaturePolicyIdentifier>urn:gematik:fa:sak:nfdm:r1:v1</ns11:SignaturePolicyIdentifier>
+          </ns11:GenerateUnderSignaturePolicy>
+        </ns10:OptionalInputs>
+        <ns10:Document ID="QES821236567" RefURI="#ID1" ShortText="NFD_sample_1.4.xml">
+          <ns8:Base64XML>Base64XML_GQ6cHJvdmlkZXI+DQoJCQk8ZWhkOnBlcnNvbj4NCgkJCQk8</ns8:Base64XML>
+        </ns10:Document>
+        <ns10:IncludeRevocationInfo>true</ns10:IncludeRevocationInfo>
+      </ns10:SignRequest>
+    </ns10:SignDocument>
+  </S:Body>
+</S:Envelope>
