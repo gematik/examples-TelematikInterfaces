@@ -1,0 +1,20 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Header/>
+  <S:Body>
+    <ns7:SignDocumentResponse xmlns:ns10="urn:oasis:names:tc:dss-x:1.0:profiles:verificationreport:schema#" xmlns:ns11="http://uri.etsi.org/02231/v2#" xmlns:ns12="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns13="urn:oasis:names:tc:dss-x:1.0:profiles:SignaturePolicy:schema#" xmlns:ns14="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ns15="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns2="http://ws.gematik.de/conn/CertificateServiceCommon/v2.0" xmlns:ns3="http://www.w3.org/2001/04/xmlenc#" xmlns:ns4="http://www.w3.org/2000/09/xmldsig#" xmlns:ns5="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns6="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns7="http://ws.gematik.de/conn/SignatureService/v7.4" xmlns:ns8="http://ws.gematik.de/tel/error/v2.0" xmlns:ns9="urn:oasis:names:tc:dss:1.0:core:schema">
+      <ns7:SignResponse RequestID="QES821236567">
+        <ns5:Status>
+          <ns5:Result>OK</ns5:Result>
+        </ns5:Status>
+        <ns7:OptionalOutputs>
+          <ns7:DocumentWithSignature ID="QES821236567" RefURI="#ID1" ShortText="NFD_sample_1.4.xml">
+            <ns5:Base64XML>Base64XML_GQ6cHJvdmlkZXI+DQoJCQk8ZWhkOnBlcnNvbj4NCgkJCQk8</ns5:Base64XML>
+          </ns7:DocumentWithSignature>
+        </ns7:OptionalOutputs>
+        <ns9:SignatureObject>
+          <ns9:SignaturePtr WhichDocument="QES821236567" XPath="/*[local-name()='NFD_Document']/*[local-name()='SignatureArzt']/*[local-name()='Signature']"/>
+        </ns9:SignatureObject>
+      </ns7:SignResponse>
+    </ns7:SignDocumentResponse>
+  </S:Body>
+</S:Envelope>

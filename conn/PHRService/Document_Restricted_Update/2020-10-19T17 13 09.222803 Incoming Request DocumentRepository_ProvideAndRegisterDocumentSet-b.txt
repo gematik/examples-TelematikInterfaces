@@ -1,0 +1,228 @@
+
+--uuid:0590516a-c3dd-4a45-9c04-9ab07fde299b
+Content-Type: application/xop+xml; charset=UTF-8; type="application/soap+xml; action=\"urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-b\""
+Content-Transfer-Encoding: binary
+Content-ID: 
+<root.message@cxf.apache.org>
+    <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+        <soap:Header>
+            <homeCommunityBlock xmlns="urn:ihe:iti:xdr:2014">
+                <homeCommunityId>urn:oid:1.2.276.0.76.3.1.91</homeCommunityId>
+            </homeCommunityBlock>
+            <Action xmlns="http://www.w3.org/2005/08/addressing">urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-b</Action>
+            <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:4487c3b9-a2fd-49a5-880d-45ba1721905b</MessageID>
+            <To xmlns="http://www.w3.org/2005/08/addressing">https://aktor-fm.gematik.de:443/soap-api/PHRService/1.3.0</To>
+            <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+                <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+            </ReplyTo>
+            <ns5:ContextHeader xmlns:ns19="urn:ihe:iti:rmd:2017" xmlns:ns18="http://ws.gematik.de/fa/vsdm/vsd/v5.2" xmlns:ns17="urn:hl7-org:v3" xmlns:ns16="http://ws.gematik.de/tel/error/v2.0" xmlns:ns15="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns14="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns13="http://www.w3.org/2000/09/xmldsig#" xmlns:ns12="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns11="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:cms:3.0" xmlns:ns9="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns6="urn:ihe:iti:xds-b:2007" xmlns:ns5="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns4="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0">
+                <ns3:Context>
+                    <ns2:MandantId>Mandant1</ns2:MandantId>
+                    <ns2:ClientSystemId>ClientID1</ns2:ClientSystemId>
+                    <ns2:WorkplaceId>Workplace1</ns2:WorkplaceId>
+                    <ns2:UserId>User1</ns2:UserId>
+                </ns3:Context>
+                <ns5:RecordIdentifier>
+                    <ns4:InsurantId root="1.2.276.0.76.4.8" extension="X123456788"/>
+                    <ns4:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.91</ns4:HomeCommunityId>
+                </ns5:RecordIdentifier>
+            </ns5:ContextHeader>
+        </soap:Header>
+        <soap:Body>
+            <ns5:ProvideAndRegisterDocumentSetRequest xmlns="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns3="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns5="urn:ihe:iti:xds-b:2007" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns9="urn:oasis:names:tc:ebxml-regrep:xsd:cms:3.0" xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns11="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns12="http://www.w3.org/2000/09/xmldsig#" xmlns:ns13="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns14="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns15="http://ws.gematik.de/tel/error/v2.0" xmlns:ns16="urn:hl7-org:v3" xmlns:ns17="http://ws.gematik.de/fa/vsdm/vsd/v5.2" xmlns:ns18="urn:ihe:iti:rmd:2017">
+                <ns10:SubmitObjectsRequest>
+                    <ns7:RequestSlotList>
+                        <ns6:Slot name="homeCommunityId">
+                            <ns6:ValueList>
+                                <ns6:Value>urn:oid:1.2.276.0.76.3.1.91</ns6:Value>
+                            </ns6:ValueList>
+                        </ns6:Slot>
+                    </ns7:RequestSlotList>
+                    <ns6:RegistryObjectList>
+                        <ns6:RegistryPackage objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:RegistryPackage" id="SubmissionSet" home="urn:oid:1.2.276.0.76.3.1.91">
+                            <ns6:Slot name="submissionTime">
+                                <ns6:ValueList>
+                                    <ns6:Value>20201019171308</ns6:Value>
+                                </ns6:ValueList>
+                            </ns6:Slot>
+                            <ns6:Classification classificationScheme="urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab85e12d" classifiedObject="SubmissionSet" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="author_0">
+                                <ns6:Slot name="authorRole">
+                                    <ns6:ValueList>
+                                        <ns6:Value>11^^^&amp;1.3.6.1.4.1.19376.3.276.1.5.13&amp;ISO</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                                <ns6:Slot name="authorPerson">
+                                    <ns6:ValueList>
+                                        <ns6:Value>X123456788^^^^^^^^&amp;1.2.276.0.76.4.8&amp;ISO</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                            </ns6:Classification>
+                            <ns6:Classification classificationScheme="urn:uuid:aa543740-bdda-424e-8c96-df4873be8500" classifiedObject="SubmissionSet" nodeRepresentation="8" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="contentType_2">
+                                <ns6:Slot name="codingScheme">
+                                    <ns6:ValueList>
+                                        <ns6:Value>1.3.6.1.4.1.19376.3.276.1.5.12</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="Veranlassung durch Patient"/>
+                                </ns6:Name>
+                            </ns6:Classification>
+                            <ns6:Classification classifiedObject="SubmissionSet" classificationNode="urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="submissionSet"/>
+                            <ns6:ExternalIdentifier registryObject="SubmissionSet" identificationScheme="urn:uuid:6b5aea1a-874d-4603-a4bc-96a0a7b38446" value="X123456788^^^&amp;1.2.276.0.76.4.8&amp;ISO" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="patientId">
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="XDSSubmissionSet.patientId"/>
+                                </ns6:Name>
+                            </ns6:ExternalIdentifier>
+                            <ns6:ExternalIdentifier registryObject="SubmissionSet" identificationScheme="urn:uuid:96fdda7c-d067-4183-912e-bf5ee74998a8" value="2.25.141664468932317098835" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="uniqueId">
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="XDSSubmissionSet.uniqueId"/>
+                                </ns6:Name>
+                            </ns6:ExternalIdentifier>
+                        </ns6:RegistryPackage>
+                        <ns6:ExtrinsicObject mimeType="text/plain" objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" id="DocumentEntry-1" home="urn:oid:1.2.276.0.76.3.1.91">
+                            <ns6:Slot name="creationTime">
+                                <ns6:ValueList>
+                                    <ns6:Value>20201019171308</ns6:Value>
+                                </ns6:ValueList>
+                            </ns6:Slot>
+                            <ns6:Slot name="languageCode">
+                                <ns6:ValueList>
+                                    <ns6:Value>de-DE</ns6:Value>
+                                </ns6:ValueList>
+                            </ns6:Slot>
+                            <ns6:Slot name="URI">
+                                <ns6:ValueList>
+                                    <ns6:Value>allergien.txt</ns6:Value>
+                                </ns6:ValueList>
+                            </ns6:Slot>
+                            <ns6:Name>
+                                <ns6:LocalizedString value="Ernährungsunverträglichkeit"/>
+                            </ns6:Name>
+                            <ns6:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" classifiedObject="DocumentEntry-1" nodeRepresentation="DOK" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="class_0">
+                                <ns6:Slot name="codingScheme">
+                                    <ns6:ValueList>
+                                        <ns6:Value>1.3.6.1.4.1.19376.3.276.1.5.8</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="Dokumente ohne besondere Form (Notizen)"/>
+                                </ns6:Name>
+                            </ns6:Classification>
+                            <ns6:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="DocumentEntry-1" nodeRepresentation="PAT" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="confidentiality_1">
+                                <ns6:Slot name="codingScheme">
+                                    <ns6:ValueList>
+                                        <ns6:Value>1.2.276.0.76.5.491</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="Dokument eines Versicherten"/>
+                                </ns6:Name>
+                            </ns6:Classification>
+                            <ns6:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" classifiedObject="DocumentEntry-1" nodeRepresentation="LEÄ" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="confidentiality_2">
+                                <ns6:Slot name="codingScheme">
+                                    <ns6:ValueList>
+                                        <ns6:Value>1.2.276.0.76.5.491</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="Leistungserbringeräquivalentes Dokument eines Versicherten oder Kostenträgers"/>
+                                </ns6:Name>
+                            </ns6:Classification>
+                            <ns6:Classification classificationScheme="urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4" classifiedObject="DocumentEntry-1" nodeRepresentation="H1" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="event_3">
+                                <ns6:Slot name="codingScheme">
+                                    <ns6:ValueList>
+                                        <ns6:Value>1.3.6.1.4.1.19376.3.276.1.5.15</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="vom Patienten mitgebracht"/>
+                                </ns6:Name>
+                            </ns6:Classification>
+                            <ns6:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" classifiedObject="DocumentEntry-1" nodeRepresentation="urn:ihe:iti:xds:2017:mimeTypeSufficient" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="formatCode_4">
+                                <ns6:Slot name="codingScheme">
+                                    <ns6:ValueList>
+                                        <ns6:Value>1.3.6.1.4.1.19376.1.2.3</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="Format aus MIME Type ableitbar"/>
+                                </ns6:Name>
+                            </ns6:Classification>
+                            <ns6:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" classifiedObject="DocumentEntry-1" nodeRepresentation="PAT" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="healthCare_5">
+                                <ns6:Slot name="codingScheme">
+                                    <ns6:ValueList>
+                                        <ns6:Value>1.3.6.1.4.1.19376.3.276.1.5.3</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="Patient außerhalb der Betreuung "/>
+                                </ns6:Name>
+                            </ns6:Classification>
+                            <ns6:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" classifiedObject="DocumentEntry-1" nodeRepresentation="PAT" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="practice_6">
+                                <ns6:Slot name="codingScheme">
+                                    <ns6:ValueList>
+                                        <ns6:Value>1.3.6.1.4.1.19376.3.276.1.5.5</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="Patient außerhalb der Betreuung"/>
+                                </ns6:Name>
+                            </ns6:Classification>
+                            <ns6:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" classifiedObject="DocumentEntry-1" nodeRepresentation="PATD" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="type_7">
+                                <ns6:Slot name="codingScheme">
+                                    <ns6:ValueList>
+                                        <ns6:Value>1.3.6.1.4.1.19376.3.276.1.5.9</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="Patienteneigene Dokumente"/>
+                                </ns6:Name>
+                            </ns6:Classification>
+                            <ns6:Classification classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" classifiedObject="DocumentEntry-1" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="author_8">
+                                <ns6:Slot name="authorPerson">
+                                    <ns6:ValueList>
+                                        <ns6:Value>111111111^Sonnenschein^Martina^^^Dr.^^^&amp;1.2.276.0.76.4.16&amp;ISO</ns6:Value>
+                                    </ns6:ValueList>
+                                </ns6:Slot>
+                            </ns6:Classification>
+                            <ns6:ExternalIdentifier registryObject="DocumentEntry-1" identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" value="X123456788^^^&amp;1.2.276.0.76.4.8&amp;ISO" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="patientId">
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="XDSDocumentEntry.patientId"/>
+                                </ns6:Name>
+                            </ns6:ExternalIdentifier>
+                            <ns6:ExternalIdentifier registryObject="DocumentEntry-1" identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" value="2.25.234370702471349646530" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" id="uniqueId">
+                                <ns6:Name>
+                                    <ns6:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+                                </ns6:Name>
+                            </ns6:ExternalIdentifier>
+                        </ns6:ExtrinsicObject>
+                        <ns6:Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember" sourceObject="SubmissionSet" targetObject="DocumentEntry-1" id="association_DocumentEntry-1">
+                            <ns6:Slot name="SubmissionSetStatus">
+                                <ns6:ValueList>
+                                    <ns6:Value>Original</ns6:Value>
+                                </ns6:ValueList>
+                            </ns6:Slot>
+                        </ns6:Association>
+                    </ns6:RegistryObjectList>
+                </ns10:SubmitObjectsRequest>
+                <ns5:Document id="DocumentEntry-1">
+                    <xop:Include xmlns:xop="http://www.w3.org/2004/08/xop/include" href="cid:1f08ac64-c455-455d-a38c-35df24d526bb-2@urn%3Aihe%3Aiti%3Axds-b%3A2007"/>
+                </ns5:Document>
+            </ns5:ProvideAndRegisterDocumentSetRequest>
+        </soap:Body>
+    </soap:Envelope>
+    
+--uuid:0590516a-c3dd-4a45-9c04-9ab07fde299b
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: binary
+Content-ID: 
+    <1f08ac64-c455-455d-a38c-35df24d526bb-2@urn:ihe:iti:xds-b:2007>
+        
+
+Liste der Allergene: 
+Erdnüsse 
+Walnuss 
+Birke 
+die meisten Äpfel (roh) 
+Paranuss 
+--uuid:0590516a-c3dd-4a45-9c04-9ab07fde299b--

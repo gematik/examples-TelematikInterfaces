@@ -1,0 +1,35 @@
+<!--XML-Beispieldatei für folgenden Anwendungsfall: SignDocument Response, XAdES, parallel, enveloped, gesamtes Dokument, nonQES-->
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <ns7:SignDocumentResponse xmlns:ns15="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns14="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ns13="urn:oasis:names:tc:dss-x:1.0:profiles:SignaturePolicy:schema#" xmlns:ns12="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns11="http://uri.etsi.org/02231/v2#" xmlns:ns10="urn:oasis:names:tc:dss-x:1.0:profiles:verificationreport:schema#" xmlns:ns9="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns8="http://ws.gematik.de/tel/error/v2.0" xmlns:ns7="http://ws.gematik.de/conn/SignatureService/v7.4" xmlns:ns6="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns4="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://www.w3.org/2001/04/xmlenc#" xmlns:ns2="http://ws.gematik.de/conn/CertificateServiceCommon/v2.0">
+         <ns7:SignResponse RequestID="anyID">
+            <ns5:Status>
+               <ns5:Result>Warning</ns5:Result>
+               <ns8:Error>
+                  <ns8:MessageID>MessageID</ns8:MessageID>
+                  <ns8:Timestamp>2019-05-22T08:58:00.555Z</ns8:Timestamp>
+                  <ns8:Trace>
+                     <ns8:EventID>EventID</ns8:EventID>
+                     <ns8:Instance>Konnektor-Lokal</ns8:Instance>
+                     <ns8:LogReference>LogReference</ns8:LogReference>
+                     <ns8:CompType>Konnektor</ns8:CompType>
+                     <ns8:Code>4193</ns8:Code>
+                     <ns8:Severity>Warning</ns8:Severity>
+                     <ns8:ErrorType>Security</ns8:ErrorType>
+                     <ns8:ErrorText>Kein XML-Schema für XML-Dokument vorhanden</ns8:ErrorText>
+                     <ns8:Detail Encoding="UTF-8">Es wurde kein Schema zur XML-Validierung übergeben</ns8:Detail>
+                  </ns8:Trace>
+               </ns8:Error>
+            </ns5:Status>
+            <ns7:OptionalOutputs>
+               <ns7:DocumentWithSignature ShortText="String" ID="DokumentID">
+                  <ns5:Base64XML>Base64XML_GQ6cHJvdmlkZXI+DQoJCQk8ZWhkOnBlcnNvbj4NCgkJCQk8</ns5:Base64XML>
+               </ns7:DocumentWithSignature>
+            </ns7:OptionalOutputs>
+            <ns9:SignatureObject>
+               <ns9:SignaturePtr WhichDocument="DokumentID" XPath="/*/child::*[1]"/>
+            </ns9:SignatureObject>
+         </ns7:SignResponse>
+      </ns7:SignDocumentResponse>
+   </S:Body>
+</S:Envelope>

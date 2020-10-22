@@ -1,0 +1,44 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <Action xmlns="http://www.w3.org/2005/08/addressing">urn:ihe:iti:2007:RegistryStoredQuery</Action>
+        <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:c0ecc7f0-5408-4e3e-afbd-3affed18a499</MessageID>
+        <To xmlns="http://www.w3.org/2005/08/addressing">https://aktor-fm.gematik.de:443/soap-api/PHRService/1.3.0</To>
+        <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+            <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+        </ReplyTo>
+        <ns5:ContextHeader xmlns:ns19="urn:ihe:iti:rmd:2017" xmlns:ns18="http://ws.gematik.de/fa/vsdm/vsd/v5.2" xmlns:ns17="urn:hl7-org:v3" xmlns:ns16="http://ws.gematik.de/tel/error/v2.0" xmlns:ns15="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns14="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns13="http://www.w3.org/2000/09/xmldsig#" xmlns:ns12="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns11="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:cms:3.0" xmlns:ns9="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns6="urn:ihe:iti:xds-b:2007" xmlns:ns5="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns4="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns3="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorCommon/v5.0">
+            <ns3:Context>
+                <ns2:MandantId>Mandant1</ns2:MandantId>
+                <ns2:ClientSystemId>ClientID1</ns2:ClientSystemId>
+                <ns2:WorkplaceId>Workplace1</ns2:WorkplaceId>
+                <ns2:UserId>User1</ns2:UserId>
+            </ns3:Context>
+            <ns5:RecordIdentifier>
+                <ns4:InsurantId root="1.2.276.0.76.4.8" extension="X123456788"/>
+                <ns4:HomeCommunityId>urn:oid:1.2.276.0.76.3.1.91</ns4:HomeCommunityId>
+            </ns5:RecordIdentifier>
+        </ns5:ContextHeader>
+    </soap:Header>
+    <soap:Body>
+        <ns8:AdhocQueryRequest xmlns="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns3="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns5="urn:ihe:iti:xds-b:2007" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns9="urn:oasis:names:tc:ebxml-regrep:xsd:cms:3.0" xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns11="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns12="http://www.w3.org/2000/09/xmldsig#" xmlns:ns13="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns14="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns15="http://ws.gematik.de/tel/error/v2.0" xmlns:ns16="urn:hl7-org:v3" xmlns:ns17="http://ws.gematik.de/fa/vsdm/vsd/v5.2" xmlns:ns18="urn:ihe:iti:rmd:2017" federated="false" startIndex="0" maxResults="-1">
+            <ns8:ResponseOption returnType="LeafClass" returnComposedObjects="true"/>
+            <ns6:AdhocQuery id="urn:uuid:14d4debf-8f97-4251-9a74-a90016b0af0d">
+                <ns6:Slot name="$XDSDocumentEntryClassCode">
+                    <ns6:ValueList>
+                        <ns6:Value>('BRI^^1.3.6.1.4.1.19376.3.276.1.5.8')</ns6:Value>
+                    </ns6:ValueList>
+                </ns6:Slot>
+                <ns6:Slot name="$XDSDocumentEntryPatientId">
+                    <ns6:ValueList>
+                        <ns6:Value>'X123456788^^^&amp;1.2.276.0.76.4.8&amp;ISO'</ns6:Value>
+                    </ns6:ValueList>
+                </ns6:Slot>
+                <ns6:Slot name="$XDSDocumentEntryStatus">
+                    <ns6:ValueList>
+                        <ns6:Value>('urn:oasis:names:tc:ebxml-regrep:StatusType:Approved')</ns6:Value>
+                    </ns6:ValueList>
+                </ns6:Slot>
+            </ns6:AdhocQuery>
+        </ns8:AdhocQueryRequest>
+    </soap:Body>
+</soap:Envelope>

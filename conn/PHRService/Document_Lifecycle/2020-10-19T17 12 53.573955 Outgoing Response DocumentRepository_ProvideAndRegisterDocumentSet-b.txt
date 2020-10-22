@@ -1,0 +1,19 @@
+
+--uuid:d81b291a-22b2-4731-bc44-417cbdf9aac0
+Content-Type: application/xop+xml; charset=UTF-8; type="application/soap+xml"
+Content-Transfer-Encoding: binary
+Content-ID: 
+<root.message@cxf.apache.org>
+    <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+        <soap:Header>
+            <Action xmlns="http://www.w3.org/2005/08/addressing">urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-bResponse</Action>
+            <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:fb06944d-c1ea-44d2-9179-657728a56291</MessageID>
+            <To xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</To>
+            <RelatesTo xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:e6e6d9ec-d07c-4c83-bb87-3f6b8cf6d014</RelatesTo>
+        </soap:Header>
+        <soap:Body>
+            <ns7:RegistryResponse xmlns="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:ns2="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:ns3="http://ws.gematik.de/fa/phr/v1.1" xmlns:ns4="http://ws.gematik.de/conn/phrs/PHRService/v1.3" xmlns:ns5="urn:ihe:iti:xds-b:2007" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0" xmlns:ns7="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns8="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns9="urn:oasis:names:tc:ebxml-regrep:xsd:cms:3.0" xmlns:ns10="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns11="urn:hl7-org:v3" xmlns:ns12="http://ws.gematik.de/fa/vsdm/vsd/v5.2" xmlns:ns13="http://ws.gematik.de/tel/error/v2.0" xmlns:ns14="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ns15="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ns16="http://www.w3.org/2000/09/xmldsig#" xmlns:ns17="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:ns18="urn:ihe:iti:rmd:2017" status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success"/>
+        </soap:Body>
+    </soap:Envelope>
+    
+--uuid:d81b291a-22b2-4731-bc44-417cbdf9aac0--

@@ -1,0 +1,35 @@
+<!--XML-Beispieldatei für folgenden Anwendungsfall: SignDocument Response, XAdES, enveloped, gesamtes Dokument, nonQES-->
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:kctxt="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:kcsc="http://ws.gematik.de/conn/CardServiceCommon/v2.0" xmlns:kerr="http://ws.gematik.de/tel/error/v2.0" xmlns:kpi="http://ws.gematik.de/int/version/ProductInformation/v1.1" xmlns:kcti="http://ws.gematik.de/conn/CardTerminalInfo/v8.0" xmlns:kcrtc="http://ws.gematik.de/conn/CertificateServiceCommon/v2.0" xmlns:ksigp="urn:oasis:names:tc:dss-x:1.0:profiles:SignaturePolicy:schema#" xmlns:kvrep="urn:oasis:names:tc:dss-x:1.0:profiles:verificationreport:schema#" xmlns:kets2="http://uri.etsi.org/02231/v2#" xmlns:kds="http://www.w3.org/2000/09/xmldsig#" xmlns:kenc="http://www.w3.org/2001/04/xmlenc#" xmlns:kcom="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:kcore="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:kets1="http://uri.etsi.org/01903/v1.3.2#" xmlns:ksaml2="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ksaml1="urn:oasis:names:tc:SAML:1.0:assertion" xmlns:kauthws="http://ws.gematik.de/conn/AuthSignatureService/WSDL/v7.4" xmlns:kcrtws="http://ws.gematik.de/conn/CertificateService/WSDL/v6.0" xmlns:kcrt="http://ws.gematik.de/conn/CertificateService/v6.0" xmlns:kcryws="http://ws.gematik.de/conn/EncryptionService/WSDL/v6.1" xmlns:kcry="http://ws.gematik.de/conn/EncryptionService/v6.1" xmlns:kctws="http://ws.gematik.de/conn/CardTerminalService/WSDL/v1.1" xmlns:kct="http://ws.gematik.de/conn/CardTerminalService/v1.1" xmlns:kcws="http://ws.gematik.de/conn/CardService/WSDL/v8.1" xmlns:kc="http://ws.gematik.de/conn/CardService/v8.1" xmlns:kevws="http://ws.gematik.de/conn/EventService/WSDL/v7.2" xmlns:kevt="http://ws.gematik.de/conn/EventService/v7.2" xmlns:kkvk="http://ws.gematik.de/conn/vsds/KvkService/v4.0" xmlns:ksigws="http://ws.gematik.de/conn/SignatureService/WSDL/v7.4" xmlns:ksig="http://ws.gematik.de/conn/SignatureService/v7.4" xmlns:kvsd="http://ws.gematik.de/conn/vsds/VSDService/v5.2">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <ksig:SignDocumentResponse>
+         <ksig:SignResponse RequestID="anyID">
+            <kcom:Status>
+               <kcom:Result>Warning</kcom:Result>
+               <kerr:Error>
+                  <kerr:MessageID>MessageID</kerr:MessageID>
+                  <kerr:Timestamp>2019-05-22T06:29:49Z</kerr:Timestamp>
+                  <kerr:Trace>
+                     <kerr:EventID>EventID</kerr:EventID>
+                     <kerr:Instance>Konnektor-Lokal</kerr:Instance>
+                     <kerr:LogReference>LogReference</kerr:LogReference>
+                     <kerr:CompType>Konnektor</kerr:CompType>
+                     <kerr:Code>4193</kerr:Code>
+                     <kerr:Severity>Warning</kerr:Severity>
+                     <kerr:ErrorType>Security</kerr:ErrorType>
+                     <kerr:ErrorText>Kein XML-Schema für XML-Dokument vorhanden</kerr:ErrorText>
+                  </kerr:Trace>
+               </kerr:Error>
+            </kcom:Status>
+            <ksig:OptionalOutputs>
+               <ksig:DocumentWithSignature ID="DokumentID" ShortText="String">
+                  <kcom:Base64XML>Base64XML_GQ6cHJvdmlkZXI+DQoJCQk8ZWhkOnBlcnNvbj4NCgkJCQk8</kcom:Base64XML>
+               </ksig:DocumentWithSignature>
+            </ksig:OptionalOutputs>
+            <kcore:SignatureObject>
+               <kcore:SignaturePtr WhichDocument="DokumentID" XPath="/*/child::*[1]"/>
+            </kcore:SignatureObject>
+         </ksig:SignResponse>
+      </ksig:SignDocumentResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

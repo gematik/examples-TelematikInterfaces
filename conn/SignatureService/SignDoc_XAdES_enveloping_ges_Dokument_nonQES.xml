@@ -1,0 +1,30 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header/>
+   <soapenv:Body>
+<!--XML-Beispieldatei für folgenden Anwendungsfall: SignDocument, XAdES, enveloping, gesamtes Dokument, nonQES-->
+<SIG:SignDocument xmlns="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:CONN="http://ws.gematik.de/conn/ConnectorCommon/v5.0" xmlns:CCTX="http://ws.gematik.de/conn/ConnectorContext/v2.0" xmlns:SIG="http://ws.gematik.de/conn/SignatureService/v7.4" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:sp="urn:oasis:names:tc:dss-x:1.0:profiles:SignaturePolicy:schema#" xsi:schemaLocation="http://ws.gematik.de/conn/SignatureService/v7.4 SignatureService.xsd">
+	<CONN:CardHandle>CardHandle</CONN:CardHandle>
+	<CCTX:Context>
+		<CONN:MandantId>Mandant1</CONN:MandantId>
+		<CONN:ClientSystemId>Clientsystem1</CONN:ClientSystemId>
+		<CONN:WorkplaceId>Arbeitsplatz1</CONN:WorkplaceId>
+		<CONN:UserId>nutzer</CONN:UserId>
+	</CCTX:Context>
+	<SIG:TvMode>UNCONFIRMED</SIG:TvMode>
+	<SIG:JobNumber>AAA-001</SIG:JobNumber>
+	<SIG:SignRequest RequestID='anyID'>
+		<SIG:OptionalInputs>
+			<SignatureType>urn:ietf:rfc:3275</SignatureType>
+            <SIG:IncludeObjects>
+                <IncludeObject WhichDocument='DocumentID'/>
+            </SIG:IncludeObjects>
+        </SIG:OptionalInputs>
+		<SIG:Document ID='DocumentID' ShortText='String'>
+			<CONN:Base64XML>Base64XML_GQ6cHJvdmlkZXI+DQoJCQk8ZWhkOnBlcnNvbj4NCgkJCQk8</CONN:Base64XML>
+		</SIG:Document>
+		<SIG:IncludeRevocationInfo>false</SIG:IncludeRevocationInfo>
+	</SIG:SignRequest>
+</SIG:SignDocument>
+
+   </soapenv:Body>
+</soapenv:Envelope>
