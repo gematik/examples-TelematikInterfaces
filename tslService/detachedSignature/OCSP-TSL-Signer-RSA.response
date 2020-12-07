@@ -1,0 +1,9 @@
+...
+
+dummy OCSP-Response für die das RSA basierte TLS-Signer-EE-Zertifikat
+
+Stündlich vom OCSP-Responder bezogen und auf dem primären HTTP-DL-Punkt abgelegt.
+Alle anderen DL-Punkte synchronieren dann stündlich vom primären HTTP-DL-Punkt.
+
+...
+

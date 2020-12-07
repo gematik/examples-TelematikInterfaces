@@ -1,0 +1,15 @@
+
+... 
+
+das soll hier eine RSL-TSL (für PTV3-Konnektoren etc.) sein komplett mit
+vollständiger XMLDSig-Signatur 
+
+...
+
+Die XML-Signatur wird jedoch vom Client (Konnektor) nicht ausgewertet, wenn
+er diese TSL über einen HTTP-Server aus dem Internet abruft.
+Es wird anstatt die detached-Signatur aus TSL.sig für die Signaturprüfung
+verwendet. Beide Signaturen werden durch den TSL-Signer erzeugt.
+
+...
+

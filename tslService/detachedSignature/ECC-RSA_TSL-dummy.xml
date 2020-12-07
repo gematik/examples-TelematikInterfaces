@@ -1,0 +1,15 @@
+
+... 
+
+das soll hier eine ECC-RSL-TSL (also eine ECC + RSA TSL der TI) sein --
+komplett mit vollständiger XMLDSig-Signatur 
+
+...
+
+Die XML-Signatur wird jedoch vom Client (Konnektor) nicht ausgewertet, wenn
+es dieses TSL über einen HTTP-Server aus dem Internet abruft.
+Dabei wird die detached-Signatur aus ECC-RSA_TSL.sig für die Signatur
+verwendet. Beide Signaturen werden durch den TSL-Signer erzeugt.
+
+...
+

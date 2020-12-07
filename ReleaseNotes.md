@@ -1,3 +1,8 @@
+# Release 3.0.0
+- add TSL detached signature example
+ - add KIM nonQES sample
+
+
 # Release 2.0.0
 - add: samples for ePA (PHRService)
 
