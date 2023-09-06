@@ -2,6 +2,9 @@
 
 # Release Notes examples-TelematikInterfaces
 
+## Release 3.0.2
+- (editorial) fix typo
+
 ## Release 3.0.1
 - (editorial) refine project readme
 - (editorial) add security and contribution notes with code of conduct
